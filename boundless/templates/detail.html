@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		{% load staticfiles %}
+		<title>Boundless</title>
+		<meta name="description" content="Kenya travel agent, flight booking, kenya holidays">
+		<meta name="author" content="Boundless">
+		<meta name="keywords" content="Kenya travel agent, flight booking, kenya holidays">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link rel="stylesheet" href="{% static "css/blog.css" %}" />
+		<link rel="stylesheet" href="{% static "bootstrap-3.1.1-dist/css/bootstrap.min.css" %}" />
+		
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	</head>
+
+	<body>
+		<nav>
+				<a href="{% url "boundless.views.main" %}">Home</a>
+				<a href="{% url "boundless.views.main" %}#about">About us</a>
+				<a href="{% url "boundless.views.main" %}#service">Services</a>
+				<a href="{% url "boundless.views.main" %}#contact">Get in touch</a>
+				<a href="{% url "boundless.views.posts"%}">View Travel</a>
+			</nav>
+		
+			
+			<div class="container">
+				<img src="{{post.image.url}}" alt="{{post.image.name}}"/>
+				<br />
+				<br />
+				<header>{{post.title}}</header>
+				{{post.body|safe}}
+			</div>
+			
+	</body>
+</html>

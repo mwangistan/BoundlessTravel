@@ -1,0 +1,284 @@
+@font-face{
+	font-family: 'handy';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/handy.ttf');
+}
+@font-face{
+	font-family: 'bariol';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/bariol.otf');
+}
+body{
+	background: #E1E3E4;
+	
+}
+.home-container, .about-container, .service-container, .contact-container{
+	width: 100%;
+	height: 700px;
+	padding-top: 50px;
+
+}
+
+/* Navigation styles*/
+nav{
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	text-transform: uppercase;
+	padding-left: 400px;
+	padding-top: 20px;
+	background: rgba(0, 0, 0, 0.6);
+	font-weight: 700;
+}
+nav a{
+	padding-left: 50px;
+	color: #fff;
+}
+nav a:hover{
+	text-decoration: none;
+	color: #3AC162;
+	font-family: 'bariol';
+}
+nav a::before {
+	color: #fff;
+	position: absolute;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+nav a:hover::before,
+nav a:focus::before {
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	transform: scale(0.9);
+	opacity: 0;
+}
+ header{
+	color: #fff;
+	position: absolute;
+	margin-top: -200px;
+	margin-left: 100px;
+}
+header h3{
+	font-weight: 700;
+	font-size: 50px;
+	letter-spacing: 1.3px;
+}
+header p{
+	font-size: 40px;
+	padding-left: 100px;
+	font-style: italic;
+	font-family: 'handy';
+}
+
+/* About-styles*/
+.about-container{
+	font-family: 'bariol';
+	padding-left: 450px;
+	padding-top: 100px;
+
+}
+.main-about{
+	width: 500px;
+}
+.main-about h3{
+	padding-left: 150px;
+	text-transform: uppercase;
+	font-weight: 700;
+	
+}
+.reviews{
+	padding-top: 20px;
+	margin-left: -200px;
+}
+.reviews h5{
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.review1, .review2, .review3{
+	
+	background: #fff;
+	border-radius: 5px;
+	width: 300px;
+	height: 100px;
+	border: 1px solid rgba(190, 190, 190, 0.4);
+	padding: 10px;
+	box-shadow:  5px 5px 5px #888;
+}
+.review1 footer, .review2 footer, .review3 footer{
+	font-weight: 700;
+	float: right;	
+}
+
+.review1 p:before, .review2 p:before, .review3 p:before{
+	content: url('../images/quote_2.png');
+	opacity: 0.6;
+}
+.reviews p:after, .review2 p:after, .review3 p:after{
+	padding-left: 5px;
+	content: url('../images/quote_1.png');
+	opacity: 0.6;
+}
+.review2{
+	margin-top: 20px;
+	margin-left: -50px;
+	
+}
+.review3{
+	margin-top: 20px;
+}
+
+.the-team{
+	float: right;
+	padding-right: 100px;
+	margin-top: -370px;
+	width: 500px;
+}
+.the-team h5{
+	font-size: 15px;
+	padding-left: 50px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.image-container img{
+	opacity: 0.9;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	padding: 20px;
+}
+.image-container img:last-child{
+	margin-left: 110px;
+}
+/* Services-styles*/
+.service-container{
+	font-family: 'bariol';
+	padding-top: 100px;
+	background: #fff;
+	height: 850px;
+}
+
+.service-container img{
+	width: 249px;
+	height: 190px;
+}
+
+.service-container h3{
+	padding-bottom: 10px;
+	padding-top: 5px;
+	padding-left: 600px;
+	font-weight: 700;
+	text-transform: uppercase;
+
+}
+.ticketing-service, .booking-service, .rentals-service, .customised-tours-service, .package-tours-service{
+	border: 1px solid grey;
+	width: 250px;
+	height: 300px;
+	 -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+.ticketing-service h4, .booking-service h4, .rentals-service h4, .customised-tours-service h4, .package-tours-service h4{
+	margin-top: -3px;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	padding-left: 50px;
+	background: #3AC162;
+	color: #fff;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 13px;
+	
+}
+.service-container p{
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.ticketing-service{
+	margin-left: 250px;
+}
+
+.booking-service{
+	margin-top: -300px;
+	margin-left: 550px;
+}
+.rentals-service{
+	margin-top: -300px;
+	margin-left: 850px;
+}
+.customised-tours-service{
+	margin-top: 50px;
+	margin-left: 400px;
+}
+.package-tours-service{
+	margin-top: -300px;
+	margin-left: 700px;
+}
+/* Contact-styles*/
+.contact-container{
+	font-family: 'bariol';
+	height: 500px;
+	padding-top: 100px;
+	padding-bottom: 30px;
+}
+
+.contact-container h3{
+	padding-left: 600px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+form{
+	margin-top: 40px;
+	width: 400px;
+	margin-left: 10px;
+}
+.mail{
+	font-size: 20px;
+	font-family: 'bariol';
+	color: #3AC162;
+}
+.btn{
+	margin-left: 290px;
+}
+
+.map-right{
+	margin-top: -370px;
+	margin-left: 500px;
+}
+.map-right p{
+	font-family: 'bariol';
+}
+iframe{
+	margin-top: -12px;
+	border-radius: 3px;
+	box-shadow: 5px 5px 5px #888;
+}
+.location{
+	margin-top: -300px;
+	margin-left: 450px;
+}
+.follow{
+	float: right;
+	margin-right: 60px;
+	margin-top: -430px;
+}
+.follow a{
+	padding-left: 10px;
+}
+.follow a:hover:after{
+	content: attr(data-hover);
+	position: absolute;
+	background: #fff;
+	color: #3AC162;
+	font-family: 'bariol';
+	margin-left: -100px;
+	margin-top: 60px;
+	padding: 3px;
+} 

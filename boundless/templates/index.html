@@ -1,0 +1,228 @@
+mee=<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		{% load staticfiles %}
+		<title>Boundless</title>
+		<meta name="description" content="Kenya travel agent, flight booking, kenya holidays">
+		<meta name="author" content="Boundless">
+		<meta name="keywords" content="Kenya travel agent, flight booking, kenya holidays" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="{% static "bootstrap-3.1.1-dist/css/bootstrap.min.css" %}" />
+		<link rel="stylesheet" href="{% static "css/demo.css" %}" />
+		<script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/form.js" %}"></script>
+	    
+		
+	</head>
+
+	<body>
+		
+		<div id="home">
+			<nav>
+				<a href="#home">Home</a>
+				<a href="#about">About us</a>
+				<a href="#service">Services</a>
+				<a href="#contact">Get in touch</a>
+				<a href="{% url "boundless.views.posts" %}">View Travel</a>
+			</nav>
+
+
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height: 531px;">
+				
+				<ol class="carousel-indicators">
+    				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  				</ol>
+  				
+  				<div class="carousel-inner">
+    				<div class="item active">
+      					<img src="{% static "images/travel1.jpg" %}" height="100px">
+      						<div class="carousel-caption">
+        						<header>
+        							<h3>Boundless Travels</h3>
+        							<p>Travelling made easy</p>
+        						</header>
+      						</div>
+    						</div>
+    						
+    						<div class="item">
+      							<img src="{% static "images/travel3.jpg" %}">
+      								<div class="carousel-caption">
+        								<header>
+        									<h3>Boundless Travels</h3>
+        									<p>Where the journey matters</p>
+        								</header>
+      								</div>
+    						</div>
+    						
+    						<div class="item">
+      							<img src="{% static "images/travel5.jpeg" %}">
+      								<div class="carousel-caption">
+        								<header>
+        									<h3>Boundless Travels</h3>
+        									<p>Best service and care</p>
+        								</header>
+      								</div>
+    						</div>
+    						
+  				</div>
+  				
+  				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    				<span class="glyphicon glyphicon-chevron-left"></span>
+ 			 	</a>
+  				
+  				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    				<span class="glyphicon glyphicon-chevron-right"></span>
+  				</a>
+			</div>
+		</div>	
+			
+			<div class="about-container" id="about">
+				<div class="main-about">
+					<h3>About us</h3>
+					<p>We are a travel agency based in Nairobi, Kenya and we love what we do. We are experts in finding the best travel option for your needs. Get the hustles out of your travel experience and let you get the most out of every moment</p>
+				</div>
+				
+				<div class="reviews">
+					<h5>What our clients say</h5>
+					<div class="review1">
+						<p>Their great package discounts enabled me and my family to enjoy our trip to the beach of Mombasa</p>
+						<footer>
+							<span>Mike Sbdy</span>
+						</footer>
+					</div>
+					
+					<div class="review2">
+						<p>Thanks for doing such a great job. I highly recommend any traveller to try out Boundless Travel</p>
+						<footer>
+							<span>Lilian Sbdy</span>
+						</footer>
+					</div>
+					
+					<div class="review3">
+						<p>Their focus on customer satisfaction is beyond expectations. Kudos</p>
+						<footer>
+							<span>Sbdy</span>
+						</footer>
+					</div>
+				</div>	
+				
+				<div class="the-team">
+					<h5>The team</h5>
+					<div class="image-container">
+						<img src="a.jpg"/>
+						<img src="b.jpg" />
+						<img src="c.jpg" />
+						<img src="d.jpeg" />
+						<img src="e.jpeg" />
+						<img src="a.jpg" />
+						<img src="b.jpg" />
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="service-container" id="service">
+				<h3>Our services</h3>
+				<div class="upper-deck">
+				  <div class="ticketing-service">
+					<img src="{% static "images/ticketing2.jpg" %}"/>  	
+					<h4>Air Ticketing</h4> 
+					<p>For both domestic and international flights at special attractive rates.</p>
+				  </div>
+				  
+				  <div class="booking-service">
+				  <img src="{% static "images/reservation.jpg" %}"/>
+					<h4>Hotel Bookings</h4> 
+					<p>Around Kenya at discounted rates</p>
+				  </div>
+				  
+				  <div class="rentals-service">
+				  <img src="{% static "images/rental.jpg" %}" />
+					<h4>Car rentals</h4>
+					<p>Your local transportation needs</p>
+				
+				  </div>
+				 </div>
+				 
+				 <div class="lower-deck">
+				  	
+				  <div class="customised-tours-service">
+				  	<img src="{% static "images/customised.jpg" %}"/>
+					<h4>Customised Package tours</h4>
+					<p>Around Kenya</p>
+				  </div>
+				  
+				 <div class="package-tours-service">
+					<img src="{% static "images/package.jpg" %}" />
+					<h4>Package tour bookings</h4>
+					<p>With major tour operators in Kenya</p>
+			
+				</div>
+				</div>
+				
+			</div>
+			
+			<div class="contact-container" id="contact">
+				<h3>Contact us</h3>
+				
+				<form method="POST" action="{% url 'boundless.views.main' %}" id="form">
+					{% csrf_token %}
+					<div class="form-group" id="1">
+						
+					<p class="mail">Send a mail</p>
+					<input type="text" id="subject" name="subject" class="form-control has-error" placeholder="Subject of Your mail" style="width: 300px;"/>
+				
+					</div>
+					
+					<div class="form-group" id="2">	
+					
+					<input type="text" id="name" name="name" class="form-control" placeholder="Your name" style="width: 300px;"/>
+					
+					</div>
+					
+					<div class="form-group" id="3">	
+					
+					<input type="email" id="email" name="email" class="form-control" placeholder="Email Address" style="width: 300px;"/>
+					
+					</div>
+					
+					<div class="form-group" id="4">
+						
+					<textarea id="message" name="message" placeholder="Your message" rows="6" cols="70" class="form-control"></textarea>
+					
+					</div>
+					 <button type="submit" class="btn btn-default">Send Message</button>
+				</form>
+				
+				<div class="map-right">
+					<p class="mail">Physical location</p>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8492175005927!2d36.8040919!3d-1.2628587999999967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17152f970aed%3A0xc7c01278c2a87efd!2sAmee+Arcade%2C+A2%2C+Nairobi!5e0!3m2!1sen!2ske!4v1412576194555" width="400" height="300" frameborder="0" style="border:0"></iframe>
+					
+					<p><i class="glyphicon glyphicon-map-marker"></i><strong> Physical location</strong>: Westlands Nairobi, <span>Amee Arcade Building, <span class="floor">4th floor</span></span></p>
+					<p><i class="glyphicon glyphicon-phone-alt"></i><strong> Phone number</strong>: +25457493983</p>
+					<p><i class="glyphicon glyphicon-envelope"></i><strong> Email address</strong>: sth@boundless.com</p>
+				</div>
+				
+				<div class="follow">
+					<p class="mail">Social media</p>
+					<a data-hover="Follow us on twitter" href="#"><img src="{% static "images/follow-us-on-twitter.png" %}" /></a>
+					<a data-hover="Follow us on facebook" href="#"><img src="{% static "images/like-us-on-facebook.png" %}"/></a>
+				</div>
+				
+				
+			</div>
+		<script src="{% static "bootstrap-3.1.1-dist/js/bootstrap.min.js" %}"></script>
+		
+	</body>
+</html>
